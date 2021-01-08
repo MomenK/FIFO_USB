@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xF5D247A6BE1FCF1E",
+      "boundary_crc": "0xAD0C1C03FDD3BF70",
       "device": "xc7a35tcsg324-2",
       "name": "design_1",
       "synth_flow_mode": "Hierarchical",
@@ -9,12 +9,12 @@
       "validated": "true"
     },
     "design_tree": {
-      "UART_TX_0": "",
-      "UART_RX_0": "",
       "clk_wiz_1": "",
       "util_vector_logic_0": "",
-      "MPairStorageControll_0": "",
-      "Data_generator_0": ""
+      "Data_generator_0": "",
+      "UART_TX_0": "",
+      "UART_RX_0": "",
+      "MPairStorageControll_0": ""
     },
     "ports": {
       "reset": {
@@ -50,10 +50,10 @@
           }
         }
       },
-      "usb2_uart_rxd": {
+      "usb_uart_rxd": {
         "direction": "I"
       },
-      "usb2_uart_txd": {
+      "usb_uart_txd": {
         "direction": "O"
       },
       "AUX4": {
@@ -61,6 +61,121 @@
       }
     },
     "components": {
+      "clk_wiz_1": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "design_1_clk_wiz_1_0",
+        "parameters": {
+          "CLKOUT1_JITTER": {
+            "value": "114.829"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "200.000"
+          },
+          "CLKOUT2_JITTER": {
+            "value": "159.371"
+          },
+          "CLKOUT2_PHASE_ERROR": {
+            "value": "98.575"
+          },
+          "CLKOUT2_REQUESTED_OUT_FREQ": {
+            "value": "40.000"
+          },
+          "CLKOUT2_USED": {
+            "value": "true"
+          },
+          "CLKOUT3_JITTER": {
+            "value": "159.371"
+          },
+          "CLKOUT3_PHASE_ERROR": {
+            "value": "98.575"
+          },
+          "CLKOUT3_REQUESTED_OUT_FREQ": {
+            "value": "40.000"
+          },
+          "CLKOUT3_REQUESTED_PHASE": {
+            "value": "90"
+          },
+          "CLKOUT3_USED": {
+            "value": "true"
+          },
+          "CLK_IN1_BOARD_INTERFACE": {
+            "value": "sys_clock"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "5.000"
+          },
+          "MMCM_CLKOUT1_DIVIDE": {
+            "value": "25"
+          },
+          "MMCM_CLKOUT2_DIVIDE": {
+            "value": "25"
+          },
+          "MMCM_CLKOUT2_PHASE": {
+            "value": "90.000"
+          },
+          "NUM_OUT_CLKS": {
+            "value": "3"
+          },
+          "RESET_BOARD_INTERFACE": {
+            "value": "reset"
+          },
+          "RESET_PORT": {
+            "value": "reset"
+          },
+          "RESET_TYPE": {
+            "value": "ACTIVE_HIGH"
+          },
+          "USE_BOARD_FLOW": {
+            "value": "true"
+          }
+        }
+      },
+      "util_vector_logic_0": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "design_1_util_vector_logic_0_0",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "not"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "Data_generator_0": {
+        "vlnv": "xilinx.com:module_ref:Data_generator:1.0",
+        "xci_name": "design_1_Data_generator_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Data_generator",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "CLK": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_1_clk_out1",
+                "value_src": "ip_prop"
+              },
+              "FREQ_HZ": {
+                "value": "40000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "90.0",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "DataOut": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          }
+        }
+      },
       "UART_TX_0": {
         "vlnv": "xilinx.com:module_ref:UART_TX:1.0",
         "xci_name": "design_1_UART_TX_0_0",
@@ -172,87 +287,6 @@
           }
         }
       },
-      "clk_wiz_1": {
-        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
-        "xci_name": "design_1_clk_wiz_1_0",
-        "parameters": {
-          "CLKOUT1_JITTER": {
-            "value": "114.829"
-          },
-          "CLKOUT1_REQUESTED_OUT_FREQ": {
-            "value": "200.000"
-          },
-          "CLKOUT2_JITTER": {
-            "value": "159.371"
-          },
-          "CLKOUT2_PHASE_ERROR": {
-            "value": "98.575"
-          },
-          "CLKOUT2_REQUESTED_OUT_FREQ": {
-            "value": "40.000"
-          },
-          "CLKOUT2_USED": {
-            "value": "true"
-          },
-          "CLKOUT3_JITTER": {
-            "value": "159.371"
-          },
-          "CLKOUT3_PHASE_ERROR": {
-            "value": "98.575"
-          },
-          "CLKOUT3_REQUESTED_OUT_FREQ": {
-            "value": "40.000"
-          },
-          "CLKOUT3_REQUESTED_PHASE": {
-            "value": "90"
-          },
-          "CLKOUT3_USED": {
-            "value": "true"
-          },
-          "CLK_IN1_BOARD_INTERFACE": {
-            "value": "sys_clock"
-          },
-          "MMCM_CLKOUT0_DIVIDE_F": {
-            "value": "5.000"
-          },
-          "MMCM_CLKOUT1_DIVIDE": {
-            "value": "25"
-          },
-          "MMCM_CLKOUT2_DIVIDE": {
-            "value": "25"
-          },
-          "MMCM_CLKOUT2_PHASE": {
-            "value": "90.000"
-          },
-          "NUM_OUT_CLKS": {
-            "value": "3"
-          },
-          "RESET_BOARD_INTERFACE": {
-            "value": "reset"
-          },
-          "RESET_PORT": {
-            "value": "reset"
-          },
-          "RESET_TYPE": {
-            "value": "ACTIVE_HIGH"
-          },
-          "USE_BOARD_FLOW": {
-            "value": "true"
-          }
-        }
-      },
-      "util_vector_logic_0": {
-        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
-        "xci_name": "design_1_util_vector_logic_0_0",
-        "parameters": {
-          "C_OPERATION": {
-            "value": "not"
-          },
-          "C_SIZE": {
-            "value": "1"
-          }
-        }
-      },
       "MPairStorageControll_0": {
         "vlnv": "xilinx.com:module_ref:MPairStorageController:1.0",
         "xci_name": "design_1_MPairStorageControll_0_0",
@@ -326,48 +360,14 @@
             "direction": "O"
           }
         }
-      },
-      "Data_generator_0": {
-        "vlnv": "xilinx.com:module_ref:Data_generator:1.0",
-        "xci_name": "design_1_Data_generator_0_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "Data_generator",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "CLK": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "/clk_wiz_1_clk_out1",
-                "value_src": "ip_prop"
-              },
-              "FREQ_HZ": {
-                "value": "40000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "90.0",
-                "value_src": "ip_prop"
-              }
-            }
-          },
-          "DataOut": {
-            "direction": "O",
-            "left": "11",
-            "right": "0"
-          }
-        }
       }
     },
     "nets": {
       "clk_wiz_1_clk_out1": {
         "ports": [
           "clk_wiz_1/clk_out1",
-          "UART_RX_0/i_Clk",
-          "UART_TX_0/i_Clk"
+          "UART_TX_0/i_Clk",
+          "UART_RX_0/i_Clk"
         ]
       },
       "sys_clock_1": {
@@ -388,17 +388,17 @@
           "clk_wiz_1/reset"
         ]
       },
-      "usb2_uart_rxd_1": {
+      "usb_uart_rxd_1": {
         "ports": [
-          "usb2_uart_rxd",
+          "usb_uart_rxd",
           "UART_RX_0/i_RX_Serial"
         ]
       },
       "UART_RX_0_o_Send_command": {
         "ports": [
           "UART_RX_0/o_Send_command",
-          "MPairStorageControll_0/P_Rst",
-          "AUX4"
+          "AUX4",
+          "MPairStorageControll_0/P_Rst"
         ]
       },
       "UART_TX_0_o_TX_Done": {
@@ -410,7 +410,7 @@
       "UART_TX_0_o_TX_Serial": {
         "ports": [
           "UART_TX_0/o_TX_Serial",
-          "usb2_uart_txd"
+          "usb_uart_txd"
         ]
       },
       "clk_wiz_1_clk_out2": {

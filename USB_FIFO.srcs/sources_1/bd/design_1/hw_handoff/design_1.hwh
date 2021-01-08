@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Jan  7 12:24:40 2021" VIVADOVERSION="2019.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Jan  8 11:48:58 2021" VIVADOVERSION="2019.1">
 
   <SYSTEMINFO ARCH="artix7" BOARD="trenz.biz:te0711_35_2c:part0:1.0" DEVICE="7a35t" NAME="design_1" PACKAGE="csg324" SPEEDGRADE="-2"/>
 
@@ -14,12 +14,12 @@
         <CONNECTION INSTANCE="clk_wiz_1" PORT="clk_in1"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="usb2_uart_rxd" SIGIS="undef" SIGNAME="External_Ports_usb2_uart_rxd">
+    <PORT DIR="I" NAME="usb_uart_rxd" SIGIS="undef" SIGNAME="External_Ports_usb_uart_rxd">
       <CONNECTIONS>
         <CONNECTION INSTANCE="UART_RX_0" PORT="i_RX_Serial"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="usb2_uart_txd" SIGIS="undef" SIGNAME="UART_TX_0_o_TX_Serial">
+    <PORT DIR="O" NAME="usb_uart_txd" SIGIS="undef" SIGNAME="UART_TX_0_o_TX_Serial">
       <CONNECTIONS>
         <CONNECTION INSTANCE="UART_TX_0" PORT="o_TX_Serial"/>
       </CONNECTIONS>
@@ -125,16 +125,16 @@
             <CONNECTION INSTANCE="clk_wiz_1" PORT="clk_out1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="i_RX_Serial" SIGIS="undef" SIGNAME="External_Ports_usb2_uart_rxd">
+        <PORT DIR="I" NAME="i_RX_Serial" SIGIS="undef" SIGNAME="External_Ports_usb_uart_rxd">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="usb2_uart_rxd"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="usb_uart_rxd"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="o_RX_DV" SIGIS="undef"/>
         <PORT DIR="O" NAME="o_Send_command" SIGIS="undef" SIGNAME="UART_RX_0_o_Send_command">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="MPairStorageControll_0" PORT="P_Rst"/>
             <CONNECTION INSTANCE="External_Ports" PORT="AUX4"/>
+            <CONNECTION INSTANCE="MPairStorageControll_0" PORT="P_Rst"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="15" NAME="o_RX_Byte" RIGHT="0" SIGIS="undef"/>
@@ -174,7 +174,7 @@
         <PORT DIR="O" NAME="o_TX_Active" SIGIS="undef"/>
         <PORT DIR="O" NAME="o_TX_Serial" SIGIS="undef" SIGNAME="UART_TX_0_o_TX_Serial">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="usb2_uart_txd"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="usb_uart_txd"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="o_TX_Done" SIGIS="undef" SIGNAME="UART_TX_0_o_TX_Done">
@@ -767,13 +767,8 @@
         </PORT>
         <PORT CLKFREQUENCY="200000000" DIR="O" NAME="clk_out1" SIGIS="clk" SIGNAME="clk_wiz_1_clk_out1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="UART_RX_0" PORT="i_Clk"/>
             <CONNECTION INSTANCE="UART_TX_0" PORT="i_Clk"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="locked" SIGIS="undef" SIGNAME="clk_wiz_1_locked">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="MPairStorageControll_0" PORT="Ena"/>
+            <CONNECTION INSTANCE="UART_RX_0" PORT="i_Clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="40000000" DIR="O" NAME="clk_out2" SIGIS="clk" SIGNAME="clk_wiz_1_clk_out2">
@@ -784,6 +779,11 @@
         <PORT CLKFREQUENCY="40000000" DIR="O" NAME="clk_out3" SIGIS="clk" SIGNAME="clk_wiz_1_clk_out3">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Data_generator_0" PORT="CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="locked" SIGIS="undef" SIGNAME="clk_wiz_1_locked">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MPairStorageControll_0" PORT="Ena"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

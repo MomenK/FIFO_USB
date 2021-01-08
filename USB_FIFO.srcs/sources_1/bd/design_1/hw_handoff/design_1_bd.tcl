@@ -175,8 +175,8 @@ proc create_root_design { parentCell } {
    CONFIG.FREQ_HZ {100000000} \
    CONFIG.PHASE {0.000} \
  ] $sys_clock
-  set usb2_uart_rxd [ create_bd_port -dir I usb2_uart_rxd ]
-  set usb2_uart_txd [ create_bd_port -dir O usb2_uart_txd ]
+  set usb_uart_rxd [ create_bd_port -dir I usb_uart_rxd ]
+  set usb_uart_txd [ create_bd_port -dir O usb_uart_txd ]
 
   # Create instance: Data_generator_0, and set properties
   set block_name Data_generator
@@ -276,14 +276,14 @@ proc create_root_design { parentCell } {
   connect_bd_net -net MPairStorageControll_0_Full [get_bd_pins MPairStorageControll_0/Full] [get_bd_pins UART_TX_0/i_TX_DV]
   connect_bd_net -net UART_RX_0_o_Send_command [get_bd_ports AUX4] [get_bd_pins MPairStorageControll_0/P_Rst] [get_bd_pins UART_RX_0/o_Send_command]
   connect_bd_net -net UART_TX_0_o_TX_Done [get_bd_pins MPairStorageControll_0/ClkOut] [get_bd_pins UART_TX_0/o_TX_Done]
-  connect_bd_net -net UART_TX_0_o_TX_Serial [get_bd_ports usb2_uart_txd] [get_bd_pins UART_TX_0/o_TX_Serial]
+  connect_bd_net -net UART_TX_0_o_TX_Serial [get_bd_ports usb_uart_txd] [get_bd_pins UART_TX_0/o_TX_Serial]
   connect_bd_net -net clk_wiz_1_clk_out1 [get_bd_pins UART_RX_0/i_Clk] [get_bd_pins UART_TX_0/i_Clk] [get_bd_pins clk_wiz_1/clk_out1]
   connect_bd_net -net clk_wiz_1_clk_out2 [get_bd_pins MPairStorageControll_0/ClkIn] [get_bd_pins clk_wiz_1/clk_out2]
   connect_bd_net -net clk_wiz_1_clk_out3 [get_bd_pins Data_generator_0/CLK] [get_bd_pins clk_wiz_1/clk_out3]
   connect_bd_net -net clk_wiz_1_locked [get_bd_pins MPairStorageControll_0/Ena] [get_bd_pins clk_wiz_1/locked]
   connect_bd_net -net reset_1 [get_bd_ports reset] [get_bd_pins util_vector_logic_0/Op1]
   connect_bd_net -net sys_clock_1 [get_bd_ports sys_clock] [get_bd_pins clk_wiz_1/clk_in1]
-  connect_bd_net -net usb2_uart_rxd_1 [get_bd_ports usb2_uart_rxd] [get_bd_pins UART_RX_0/i_RX_Serial]
+  connect_bd_net -net usb_uart_rxd_1 [get_bd_ports usb_uart_rxd] [get_bd_pins UART_RX_0/i_RX_Serial]
   connect_bd_net -net util_vector_logic_0_Res [get_bd_pins clk_wiz_1/reset] [get_bd_pins util_vector_logic_0/Res]
 
   # Create address segments

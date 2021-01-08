@@ -1,0 +1,467 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri Jan  8 11:49:02 2021
+# Process ID: 25007
+# Current directory: /home/monx/Projects/FIFO_USB/USB_FIFO.runs/synth_1
+# Command line: vivado -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
+# Log file: /home/monx/Projects/FIFO_USB/USB_FIFO.runs/synth_1/design_1_wrapper.vds
+# Journal file: /home/monx/Projects/FIFO_USB/USB_FIFO.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source design_1_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2019.1/data/ip'.
+Command: synth_design -top design_1_wrapper -part xc7a35tcsg324-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcsg324-2
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 25144 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1696.973 ; gain = 154.719 ; free physical = 23221 ; free virtual = 28784
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'design_1' [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6157] synthesizing module 'design_1_Data_generator_0_0' [/home/monx/Projects/FIFO_USB/USB_FIFO.runs/synth_1/.Xil/Vivado-25007-monx-PC/realtime/design_1_Data_generator_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_Data_generator_0_0' (1#1) [/home/monx/Projects/FIFO_USB/USB_FIFO.runs/synth_1/.Xil/Vivado-25007-monx-PC/realtime/design_1_Data_generator_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_MPairStorageControll_0_0' [/home/monx/Projects/FIFO_USB/USB_FIFO.runs/synth_1/.Xil/Vivado-25007-monx-PC/realtime/design_1_MPairStorageControll_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_MPairStorageControll_0_0' (2#1) [/home/monx/Projects/FIFO_USB/USB_FIFO.runs/synth_1/.Xil/Vivado-25007-monx-PC/realtime/design_1_MPairStorageControll_0_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'MPairStorageControll_0' of module 'design_1_MPairStorageControll_0_0' has 10 connections declared, but only 8 given [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/sources_1/bd/design_1/synth/design_1.v:49]
+INFO: [Synth 8-6157] synthesizing module 'design_1_UART_RX_0_0' [/home/monx/Projects/FIFO_USB/USB_FIFO.runs/synth_1/.Xil/Vivado-25007-monx-PC/realtime/design_1_UART_RX_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_UART_RX_0_0' (3#1) [/home/monx/Projects/FIFO_USB/USB_FIFO.runs/synth_1/.Xil/Vivado-25007-monx-PC/realtime/design_1_UART_RX_0_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'UART_RX_0' of module 'design_1_UART_RX_0_0' has 6 connections declared, but only 3 given [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/sources_1/bd/design_1/synth/design_1.v:58]
+INFO: [Synth 8-6157] synthesizing module 'design_1_UART_TX_0_0' [/home/monx/Projects/FIFO_USB/USB_FIFO.runs/synth_1/.Xil/Vivado-25007-monx-PC/realtime/design_1_UART_TX_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_UART_TX_0_0' (4#1) [/home/monx/Projects/FIFO_USB/USB_FIFO.runs/synth_1/.Xil/Vivado-25007-monx-PC/realtime/design_1_UART_TX_0_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'UART_TX_0' of module 'design_1_UART_TX_0_0' has 7 connections declared, but only 6 given [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/sources_1/bd/design_1/synth/design_1.v:62]
+INFO: [Synth 8-6157] synthesizing module 'design_1_clk_wiz_1_0' [/home/monx/Projects/FIFO_USB/USB_FIFO.runs/synth_1/.Xil/Vivado-25007-monx-PC/realtime/design_1_clk_wiz_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_wiz_1_0' (5#1) [/home/monx/Projects/FIFO_USB/USB_FIFO.runs/synth_1/.Xil/Vivado-25007-monx-PC/realtime/design_1_clk_wiz_1_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_util_vector_logic_0_0' [/home/monx/Projects/FIFO_USB/USB_FIFO.runs/synth_1/.Xil/Vivado-25007-monx-PC/realtime/design_1_util_vector_logic_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_util_vector_logic_0_0' (6#1) [/home/monx/Projects/FIFO_USB/USB_FIFO.runs/synth_1/.Xil/Vivado-25007-monx-PC/realtime/design_1_util_vector_logic_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1' (7#1) [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (8#1) [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1750.723 ; gain = 208.469 ; free physical = 23243 ; free virtual = 28808
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1757.660 ; gain = 215.406 ; free physical = 23241 ; free virtual = 28806
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1757.660 ; gain = 215.406 ; free physical = 23241 ; free virtual = 28806
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/sources_1/bd/design_1/ip/design_1_UART_TX_0_0/design_1_UART_TX_0_0/design_1_UART_TX_0_0_in_context.xdc] for cell 'design_1_i/UART_TX_0'
+Finished Parsing XDC File [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/sources_1/bd/design_1/ip/design_1_UART_TX_0_0/design_1_UART_TX_0_0/design_1_UART_TX_0_0_in_context.xdc] for cell 'design_1_i/UART_TX_0'
+Parsing XDC File [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/sources_1/bd/design_1/ip/design_1_UART_RX_0_0/design_1_UART_RX_0_0/design_1_UART_RX_0_0_in_context.xdc] for cell 'design_1_i/UART_RX_0'
+Finished Parsing XDC File [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/sources_1/bd/design_1/ip/design_1_UART_RX_0_0/design_1_UART_RX_0_0/design_1_UART_RX_0_0_in_context.xdc] for cell 'design_1_i/UART_RX_0'
+Parsing XDC File [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_in_context.xdc] for cell 'design_1_i/clk_wiz_1'
+Finished Parsing XDC File [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_in_context.xdc] for cell 'design_1_i/clk_wiz_1'
+Parsing XDC File [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/sources_1/bd/design_1/ip/design_1_util_vector_logic_0_0/design_1_util_vector_logic_0_0/design_1_util_vector_logic_0_0_in_context.xdc] for cell 'design_1_i/util_vector_logic_0'
+Finished Parsing XDC File [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/sources_1/bd/design_1/ip/design_1_util_vector_logic_0_0/design_1_util_vector_logic_0_0/design_1_util_vector_logic_0_0_in_context.xdc] for cell 'design_1_i/util_vector_logic_0'
+Parsing XDC File [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/sources_1/bd/design_1/ip/design_1_MPairStorageControll_0_0/design_1_MPairStorageControll_0_0/design_1_MPairStorageControll_0_0_in_context.xdc] for cell 'design_1_i/MPairStorageControll_0'
+Finished Parsing XDC File [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/sources_1/bd/design_1/ip/design_1_MPairStorageControll_0_0/design_1_MPairStorageControll_0_0/design_1_MPairStorageControll_0_0_in_context.xdc] for cell 'design_1_i/MPairStorageControll_0'
+Parsing XDC File [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/sources_1/bd/design_1/ip/design_1_Data_generator_0_0/design_1_Data_generator_0_0/design_1_Data_generator_0_0_in_context.xdc] for cell 'design_1_i/Data_generator_0'
+Finished Parsing XDC File [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/sources_1/bd/design_1/ip/design_1_Data_generator_0_0/design_1_Data_generator_0_0/design_1_Data_generator_0_0_in_context.xdc] for cell 'design_1_i/Data_generator_0'
+Parsing XDC File [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc]
+WARNING: [Vivado 12-584] No ports matched 'Frame_led'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:9]
+WARNING: [Vivado 12-584] No ports matched 'FSM_led'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:10]
+WARNING: [Vivado 12-584] No ports matched 'DOUT'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:16]
+WARNING: [Vivado 12-584] No ports matched 'AFE_DIC_SPI'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:17]
+WARNING: [Vivado 12-584] No ports matched 'SDATA'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:18]
+WARNING: [Vivado 12-584] No ports matched 'SCLK'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:19]
+WARNING: [Vivado 12-584] No ports matched 'SEN[0]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:20]
+WARNING: [Vivado 12-584] No ports matched 'SEN[1]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:21]
+WARNING: [Vivado 12-584] No ports matched 'AFE_RESET'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:24]
+WARNING: [Vivado 12-584] No ports matched 'AFE_TRIG'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:25]
+WARNING: [Vivado 12-584] No ports matched 'doutm[16]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:30]
+WARNING: [Vivado 12-584] No ports matched 'doutp[16]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:31]
+WARNING: [Vivado 12-584] No ports matched 'doutm[15]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:33]
+WARNING: [Vivado 12-584] No ports matched 'doutp[15]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:34]
+WARNING: [Vivado 12-584] No ports matched 'doutp[14]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:36]
+WARNING: [Vivado 12-584] No ports matched 'doutm[14]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:37]
+WARNING: [Vivado 12-584] No ports matched 'doutp[13]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:39]
+WARNING: [Vivado 12-584] No ports matched 'doutm[13]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:40]
+WARNING: [Vivado 12-584] No ports matched 'doutp[12]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:42]
+WARNING: [Vivado 12-584] No ports matched 'doutm[12]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:43]
+WARNING: [Vivado 12-584] No ports matched 'doutp[11]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:45]
+WARNING: [Vivado 12-584] No ports matched 'doutm[11]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:46]
+WARNING: [Vivado 12-584] No ports matched 'doutp[10]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:48]
+WARNING: [Vivado 12-584] No ports matched 'doutm[10]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:49]
+WARNING: [Vivado 12-584] No ports matched 'doutm[9]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:51]
+WARNING: [Vivado 12-584] No ports matched 'doutp[9]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:52]
+WARNING: [Vivado 12-584] No ports matched 'doutm[8]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:54]
+WARNING: [Vivado 12-584] No ports matched 'doutp[8]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:55]
+WARNING: [Vivado 12-584] No ports matched 'doutm[7]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:57]
+WARNING: [Vivado 12-584] No ports matched 'doutp[7]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:58]
+WARNING: [Vivado 12-584] No ports matched 'doutp[6]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:60]
+WARNING: [Vivado 12-584] No ports matched 'doutm[6]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:61]
+WARNING: [Vivado 12-584] No ports matched 'doutm[5]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:63]
+WARNING: [Vivado 12-584] No ports matched 'doutp[5]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:64]
+WARNING: [Vivado 12-584] No ports matched 'doutp[4]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:66]
+WARNING: [Vivado 12-584] No ports matched 'doutm[4]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:67]
+WARNING: [Vivado 12-584] No ports matched 'doutm[3]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:69]
+WARNING: [Vivado 12-584] No ports matched 'doutp[3]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:70]
+WARNING: [Vivado 12-584] No ports matched 'doutm[2]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:72]
+WARNING: [Vivado 12-584] No ports matched 'doutp[2]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:73]
+WARNING: [Vivado 12-584] No ports matched 'doutp[1]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:75]
+WARNING: [Vivado 12-584] No ports matched 'doutm[1]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:76]
+WARNING: [Vivado 12-584] No ports matched 'DCLK_n'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:78]
+WARNING: [Vivado 12-584] No ports matched 'DCLK_p'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:79]
+WARNING: [Vivado 12-584] No ports matched 'doutm[0]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:81]
+WARNING: [Vivado 12-584] No ports matched 'doutp[0]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:82]
+WARNING: [Vivado 12-584] No ports matched 'OEN'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:100]
+WARNING: [Vivado 12-584] No ports matched 'PWS'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:101]
+WARNING: [Vivado 12-584] No ports matched 'REN'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:102]
+WARNING: [Vivado 12-584] No ports matched 'Ch2[0]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:106]
+WARNING: [Vivado 12-584] No ports matched 'Ch1[0]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:107]
+WARNING: [Vivado 12-584] No ports matched 'Ch0[0]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:108]
+WARNING: [Vivado 12-584] No ports matched 'Ch2[1]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:110]
+WARNING: [Vivado 12-584] No ports matched 'Ch1[1]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:111]
+WARNING: [Vivado 12-584] No ports matched 'Ch0[1]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:112]
+WARNING: [Vivado 12-584] No ports matched 'Ch2[2]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:114]
+WARNING: [Vivado 12-584] No ports matched 'Ch1[2]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:115]
+WARNING: [Vivado 12-584] No ports matched 'Ch0[2]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:116]
+WARNING: [Vivado 12-584] No ports matched 'Ch2[3]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:118]
+WARNING: [Vivado 12-584] No ports matched 'Ch1[3]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:119]
+WARNING: [Vivado 12-584] No ports matched 'Ch0[3]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:120]
+WARNING: [Vivado 12-584] No ports matched 'Ch2[4]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:122]
+WARNING: [Vivado 12-584] No ports matched 'Ch1[4]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:123]
+WARNING: [Vivado 12-584] No ports matched 'Ch0[4]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:124]
+WARNING: [Vivado 12-584] No ports matched 'Ch2[5]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:126]
+WARNING: [Vivado 12-584] No ports matched 'Ch1[5]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:127]
+WARNING: [Vivado 12-584] No ports matched 'Ch0[5]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:128]
+WARNING: [Vivado 12-584] No ports matched 'Ch2[6]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:130]
+WARNING: [Vivado 12-584] No ports matched 'Ch1[6]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:131]
+WARNING: [Vivado 12-584] No ports matched 'Ch0[6]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:132]
+WARNING: [Vivado 12-584] No ports matched 'Ch2[7]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:134]
+WARNING: [Vivado 12-584] No ports matched 'Ch1[7]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:135]
+WARNING: [Vivado 12-584] No ports matched 'Ch0[7]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:136]
+WARNING: [Vivado 12-584] No ports matched 'Ch2[8]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:138]
+WARNING: [Vivado 12-584] No ports matched 'Ch1[8]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:139]
+WARNING: [Vivado 12-584] No ports matched 'Ch0[8]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:140]
+WARNING: [Vivado 12-584] No ports matched 'Ch2[9]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:142]
+WARNING: [Vivado 12-584] No ports matched 'Ch1[9]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:143]
+WARNING: [Vivado 12-584] No ports matched 'Ch0[9]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:144]
+WARNING: [Vivado 12-584] No ports matched 'Ch2[10]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:146]
+WARNING: [Vivado 12-584] No ports matched 'Ch1[10]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:147]
+WARNING: [Vivado 12-584] No ports matched 'Ch0[10]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:148]
+WARNING: [Vivado 12-584] No ports matched 'Ch2[11]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:150]
+WARNING: [Vivado 12-584] No ports matched 'Ch1[11]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:151]
+WARNING: [Vivado 12-584] No ports matched 'Ch0[11]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:152]
+WARNING: [Vivado 12-584] No ports matched 'Ch2[12]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:154]
+WARNING: [Vivado 12-584] No ports matched 'Ch1[12]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:155]
+WARNING: [Vivado 12-584] No ports matched 'Ch0[12]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:156]
+WARNING: [Vivado 12-584] No ports matched 'Ch2[13]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:158]
+WARNING: [Vivado 12-584] No ports matched 'Ch1[13]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:159]
+WARNING: [Vivado 12-584] No ports matched 'Ch0[13]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:160]
+WARNING: [Vivado 12-584] No ports matched 'Ch2[14]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:162]
+WARNING: [Vivado 12-584] No ports matched 'Ch1[14]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:163]
+WARNING: [Vivado 12-584] No ports matched 'Ch0[14]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:164]
+WARNING: [Vivado 12-584] No ports matched 'Ch2[15]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:166]
+WARNING: [Vivado 12-584] No ports matched 'Ch1[15]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:167]
+WARNING: [Vivado 12-584] No ports matched 'Ch0[15]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:168]
+WARNING: [Vivado 12-584] No ports matched 'Ch2[16]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:170]
+WARNING: [Vivado 12-584] No ports matched 'Ch1[16]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:171]
+WARNING: [Vivado 12-584] No ports matched 'Ch0[16]'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:172]
+INFO: [Common 17-14] Message 'Vivado 12-584' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:172]
+WARNING: [Constraints 18-619] A clock with name 'sys_clock' already exists, overwriting the previous clock with the same name. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:305]
+WARNING: [Vivado 12-646] clock 'DCLK_p' not found. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:306]
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group DCLK_p'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:306]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-508] No pins matched 'design_1_i/Bank_Clock_Alignment_0/U0/mux_0/BUFGMUX_1/I0'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:308]
+WARNING: [Vivado 12-508] No pins matched 'design_1_i/Bank_Clock_Alignment_0/U0/mux_0/BUFGMUX_1/O'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:308]
+WARNING: [Vivado 12-508] No pins matched 'design_1_i/Bank_Clock_Alignment_0/U0/mux_0/BUFGMUX_1/I1'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:309]
+WARNING: [Vivado 12-508] No pins matched 'design_1_i/Bank_Clock_Alignment_0/U0/mux_0/BUFGMUX_1/O'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:309]
+WARNING: [Vivado 12-646] clock 'clk1mux' not found. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:310]
+WARNING: [Vivado 12-646] clock 'clk2mux' not found. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:310]
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group clk1mux'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:310]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group clk2mux'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:310]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-508] No pins matched 'design_1_i/Bank_Clock_Alignment_0/U0/mux_0/BUFGMUX_2/I0'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:311]
+WARNING: [Vivado 12-508] No pins matched 'design_1_i/Bank_Clock_Alignment_0/U0/mux_0/BUFGMUX_2/O'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:311]
+WARNING: [Vivado 12-508] No pins matched 'design_1_i/Bank_Clock_Alignment_0/U0/mux_0/BUFGMUX_2/I1'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:312]
+WARNING: [Vivado 12-508] No pins matched 'design_1_i/Bank_Clock_Alignment_0/U0/mux_0/BUFGMUX_2/O'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:312]
+WARNING: [Vivado 12-646] clock 'clk3mux' not found. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:313]
+WARNING: [Vivado 12-646] clock 'clk4mux' not found. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:313]
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group clk3mux'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:313]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group clk4mux'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:313]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-508] No pins matched 'design_1_i/Bank_Clock_Alignment_0/U0/mux_0/BUFGMUX_3/I1'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:314]
+WARNING: [Vivado 12-508] No pins matched 'design_1_i/Bank_Clock_Alignment_0/U0/mux_0/BUFGMUX_3/O'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:314]
+WARNING: [Vivado 12-508] No pins matched 'design_1_i/Bank_Clock_Alignment_0/U0/mux_0/BUFGMUX_3/I0'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:315]
+WARNING: [Vivado 12-508] No pins matched 'design_1_i/Bank_Clock_Alignment_0/U0/mux_0/BUFGMUX_3/O'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:315]
+WARNING: [Vivado 12-646] clock 'clk1mux_cas' not found. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:316]
+WARNING: [Vivado 12-646] clock 'clk2mux_cas' not found. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:316]
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group clk1mux_cas'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:316]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group clk2mux_cas'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:316]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-508] No pins matched 'design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT1'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:319]
+WARNING: [Vivado 12-508] No pins matched 'design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT1'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:320]
+WARNING: [Vivado 12-508] No pins matched 'design_1_i/Bank_Clock_Alignment_0/U0/bank_PLL_0/PLLE2_ADV_inst/CLKOUT1'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:322]
+WARNING: [Vivado 12-508] No pins matched 'design_1_i/Bank_Clock_Alignment_0/U0/bank_PLL_0/PLLE2_ADV_inst/CLKOUT1'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:323]
+WARNING: [Vivado 12-508] No pins matched 'design_1_i/Bank_Clock_Alignment_0/U0/bank_PLL_0/PLLE2_ADV_inst/CLKOUT1'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:324]
+WARNING: [Vivado 12-508] No pins matched 'design_1_i/Bank_Clock_Alignment_0/U0/bank_PLL_0/PLLE2_ADV_inst/CLKOUT1'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:327]
+WARNING: [Vivado 12-508] No pins matched 'design_1_i/Bank_Clock_Alignment_0/U0/bank_PLL_0/PLLE2_ADV_inst/CLKOUT1'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:328]
+WARNING: [Vivado 12-508] No pins matched 'design_1_i/Bank_Clock_Alignment_0/U0/bank_PLL_0/PLLE2_ADV_inst/CLKOUT1'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:329]
+WARNING: [Vivado 12-508] No pins matched 'design_1_i/Bank_Clock_Alignment_0/U0/bank_PLL_0/PLLE2_ADV_inst/CLKOUT1'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:330]
+WARNING: [Vivado 12-508] No pins matched 'design_1_i/Bank_Clock_Alignment_0/U0/bank_PLL_0/PLLE2_ADV_inst/CLKOUT1'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:332]
+WARNING: [Vivado 12-508] No pins matched 'design_1_i/Bank_Clock_Alignment_0/U0/bank_PLL_0/PLLE2_ADV_inst/CLKOUT1'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:333]
+WARNING: [Vivado 12-508] No pins matched 'design_1_i/Bank_Clock_Alignment_0/U0/bank_PLL_0/PLLE2_ADV_inst/CLKOUT1'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:334]
+WARNING: [Vivado 12-508] No pins matched 'design_1_i/Bank_Clock_Alignment_0/U0/bank_PLL_0/PLLE2_ADV_inst/CLKOUT1'. [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc:335]
+Finished Parsing XDC File [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/design_1_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/monx/Projects/FIFO_USB/USB_FIFO.srcs/constrs_1/imports/REVO/REVO1.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/monx/Projects/FIFO_USB/USB_FIFO.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/monx/Projects/FIFO_USB/USB_FIFO.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1845.301 ; gain = 0.000 ; free physical = 23138 ; free virtual = 28722
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1845.301 ; gain = 0.000 ; free physical = 23138 ; free virtual = 28722
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1845.301 ; gain = 303.047 ; free physical = 23205 ; free virtual = 28790
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcsg324-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1845.301 ; gain = 303.047 ; free physical = 23205 ; free virtual = 28790
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for sys_clock. (constraint file  /home/monx/Projects/FIFO_USB/USB_FIFO.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_clock. (constraint file  /home/monx/Projects/FIFO_USB/USB_FIFO.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_in_context.xdc, line 6).
+Applied set_property DONT_TOUCH = true for design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/UART_TX_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/UART_RX_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/clk_wiz_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/util_vector_logic_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/MPairStorageControll_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/Data_generator_0. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1845.301 ; gain = 303.047 ; free physical = 23205 ; free virtual = 28790
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1845.301 ; gain = 303.047 ; free physical = 23204 ; free virtual = 28789
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1845.301 ; gain = 303.047 ; free physical = 23192 ; free virtual = 28780
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/clk_wiz_1/clk_out1' to pin 'design_1_i/clk_wiz_1/bbstub_clk_out1/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/clk_wiz_1/clk_out2' to pin 'design_1_i/clk_wiz_1/bbstub_clk_out2/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/clk_wiz_1/clk_out3' to pin 'design_1_i/clk_wiz_1/bbstub_clk_out3/O'
+WARNING: [Synth 8-565] redefining clock 'sys_clock'
+INFO: [Synth 8-5819] Moved 3 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1845.301 ; gain = 303.047 ; free physical = 23070 ; free virtual = 28665
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1845.301 ; gain = 303.047 ; free physical = 23070 ; free virtual = 28665
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1845.301 ; gain = 303.047 ; free physical = 23068 ; free virtual = 28663
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1845.301 ; gain = 303.047 ; free physical = 23071 ; free virtual = 28663
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1845.301 ; gain = 303.047 ; free physical = 23071 ; free virtual = 28663
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1845.301 ; gain = 303.047 ; free physical = 23071 ; free virtual = 28663
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1845.301 ; gain = 303.047 ; free physical = 23071 ; free virtual = 28663
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1845.301 ; gain = 303.047 ; free physical = 23071 ; free virtual = 28663
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1845.301 ; gain = 303.047 ; free physical = 23071 ; free virtual = 28663
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+----------------------------------+----------+
+|      |BlackBox name                     |Instances |
++------+----------------------------------+----------+
+|1     |design_1_Data_generator_0_0       |         1|
+|2     |design_1_MPairStorageControll_0_0 |         1|
+|3     |design_1_UART_RX_0_0              |         1|
+|4     |design_1_UART_TX_0_0              |         1|
+|5     |design_1_clk_wiz_1_0              |         1|
+|6     |design_1_util_vector_logic_0_0    |         1|
++------+----------------------------------+----------+
+
+Report Cell Usage: 
++------+----------------------------------+------+
+|      |Cell                              |Count |
++------+----------------------------------+------+
+|1     |design_1_Data_generator_0_0       |     1|
+|2     |design_1_MPairStorageControll_0_0 |     1|
+|3     |design_1_UART_RX_0_0              |     1|
+|4     |design_1_UART_TX_0_0              |     1|
+|5     |design_1_clk_wiz_1_0              |     1|
+|6     |design_1_util_vector_logic_0_0    |     1|
+|7     |IBUF                              |     2|
+|8     |OBUF                              |     2|
++------+----------------------------------+------+
+
+Report Instance Areas: 
++------+-------------+---------+------+
+|      |Instance     |Module   |Cells |
++------+-------------+---------+------+
+|1     |top          |         |    59|
+|2     |  design_1_i |design_1 |    55|
++------+-------------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1845.301 ; gain = 303.047 ; free physical = 23071 ; free virtual = 28663
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1845.301 ; gain = 215.406 ; free physical = 23124 ; free virtual = 28716
+Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1845.301 ; gain = 303.047 ; free physical = 23124 ; free virtual = 28716
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1845.301 ; gain = 0.000 ; free physical = 23069 ; free virtual = 28665
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+34 Infos, 138 Warnings, 7 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1845.301 ; gain = 306.203 ; free physical = 23159 ; free virtual = 28755
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1845.301 ; gain = 0.000 ; free physical = 23159 ; free virtual = 28755
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/monx/Projects/FIFO_USB/USB_FIFO.runs/synth_1/design_1_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Jan  8 11:49:23 2021...

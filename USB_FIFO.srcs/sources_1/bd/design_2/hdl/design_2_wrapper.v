@@ -1,8 +1,8 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Thu Jan  7 17:59:02 2021
-//Host        : Monx-PC running 64-bit major release  (build 9200)
+//Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
+//Date        : Fri Jan  8 01:13:34 2021
+//Host        : monx-PC running 64-bit Ubuntu 20.04.1 LTS
 //Command     : generate_target design_2_wrapper.bd
 //Design      : design_2_wrapper
 //Purpose     : IP block netlist
@@ -10,7 +10,8 @@
 `timescale 1 ps / 1 ps
 
 module design_2_wrapper
-   (AUX4,
+   (AUX3,
+    AUX4,
     D,
     RD_n,
     RXF_n,
@@ -18,6 +19,7 @@ module design_2_wrapper
     WR_n,
     reset,
     sys_clock);
+  output AUX3;
   output AUX4;
   inout [7:0]D;
   output RD_n;
@@ -27,6 +29,7 @@ module design_2_wrapper
   input reset;
   input sys_clock;
 
+  wire AUX3;
   wire AUX4;
   wire [7:0]D;
   wire RD_n;
@@ -37,7 +40,8 @@ module design_2_wrapper
   wire sys_clock;
 
   design_2 design_2_i
-       (.AUX4(AUX4),
+       (.AUX3(AUX3),
+        .AUX4(AUX4),
         .D(D),
         .RD_n(RD_n),
         .RXF_n(RXF_n),

@@ -1,18 +1,17 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xAACDF9ED71861BEE",
+      "boundary_crc": "0x88536CAA911A8F56",
       "device": "xc7a35tcsg324-2",
       "name": "design_2",
-      "synth_flow_mode": "Hierarchical",
-      "tool_version": "2019.1",
-      "validated": "true"
+      "synth_flow_mode": "None",
+      "tool_version": "2019.1"
     },
     "design_tree": {
       "Data_generator_0": "",
-      "MPairStorageControll_0": "",
       "clk_wiz_1": "",
       "util_vector_logic_0": "",
+      "MPairStorageControll_0": "",
       "USB_FIFO_0": ""
     },
     "ports": {
@@ -23,10 +22,6 @@
         "type": "rst",
         "direction": "I",
         "parameters": {
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
           "POLARITY": {
             "value": "ACTIVE_LOW"
           }
@@ -36,31 +31,11 @@
         "type": "clk",
         "direction": "I",
         "parameters": {
-          "CLK_DOMAIN": {
-            "value": "design_2_sys_clock",
-            "value_src": "default"
-          },
           "FREQ_HZ": {
             "value": "100000000"
           },
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
           "PHASE": {
             "value": "0.000"
-          }
-        }
-      },
-      "D": {
-        "type": "data",
-        "direction": "IO",
-        "left": "7",
-        "right": "0",
-        "parameters": {
-          "LAYERED_METADATA": {
-            "value": "undef",
-            "value_src": "default"
           }
         }
       },
@@ -75,6 +50,14 @@
       },
       "TXE_n": {
         "direction": "I"
+      },
+      "D": {
+        "direction": "IO",
+        "left": "7",
+        "right": "0"
+      },
+      "AUX3": {
+        "direction": "O"
       }
     },
     "components": {
@@ -89,100 +72,12 @@
         "ports": {
           "CLK": {
             "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "/clk_wiz_1_clk_out1",
-                "value_src": "ip_prop"
-              },
-              "FREQ_HZ": {
-                "value": "40000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "90.0",
-                "value_src": "ip_prop"
-              }
-            }
+            "direction": "I"
           },
           "DataOut": {
             "direction": "O",
             "left": "11",
             "right": "0"
-          }
-        }
-      },
-      "MPairStorageControll_0": {
-        "vlnv": "xilinx.com:module_ref:MPairStorageController:1.0",
-        "xci_name": "design_2_MPairStorageControll_0_0",
-        "parameters": {
-          "record_delay": {
-            "value": "10"
-          },
-          "rep_delay": {
-            "value": "6000"
-          },
-          "width": {
-            "value": "12"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "MPairStorageController",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "P_Rst": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "ClkIn": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "/clk_wiz_1_clk_out1",
-                "value_src": "ip_prop"
-              },
-              "FREQ_HZ": {
-                "value": "40000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              }
-            }
-          },
-          "Ena": {
-            "direction": "I"
-          },
-          "DatIn": {
-            "direction": "I",
-            "left": "11",
-            "right": "0"
-          },
-          "ClkOut": {
-            "direction": "I"
-          },
-          "DatOut": {
-            "direction": "O",
-            "left": "11",
-            "right": "0"
-          },
-          "Full": {
-            "direction": "O"
-          },
-          "Done": {
-            "direction": "O"
-          },
-          "wea": {
-            "direction": "O",
-            "left": "0",
-            "right": "0"
-          },
-          "pulser": {
-            "direction": "O"
           }
         }
       },
@@ -267,6 +162,66 @@
           }
         }
       },
+      "MPairStorageControll_0": {
+        "vlnv": "xilinx.com:module_ref:MPairStorageController:1.0",
+        "xci_name": "design_2_MPairStorageControll_0_0",
+        "parameters": {
+          "record_delay": {
+            "value": "10"
+          },
+          "rep_delay": {
+            "value": "6000"
+          },
+          "width": {
+            "value": "12"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "MPairStorageController",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "P_Rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "ClkIn": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "Ena": {
+            "direction": "I"
+          },
+          "DatIn": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "ClkOut": {
+            "direction": "I"
+          },
+          "DatOut": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "Full": {
+            "direction": "O"
+          },
+          "Done": {
+            "direction": "O"
+          },
+          "wea": {
+            "direction": "O",
+            "left": "0",
+            "right": "0"
+          },
+          "pulser": {
+            "direction": "O"
+          }
+        }
+      },
       "USB_FIFO_0": {
         "vlnv": "xilinx.com:module_ref:USB_FIFO:1.0",
         "xci_name": "design_2_USB_FIFO_0_0",
@@ -278,29 +233,15 @@
         "ports": {
           "clk": {
             "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_RESET": {
-                "value": "rst",
-                "value_src": "constant"
-              },
-              "CLK_DOMAIN": {
-                "value": "/clk_wiz_1_clk_out1",
-                "value_src": "ip_prop"
-              },
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              }
-            }
+            "direction": "I"
           },
           "rst": {
             "type": "rst",
             "direction": "I"
+          },
+          "new_input_Clk": {
+            "type": "clk",
+            "direction": "O"
           },
           "data": {
             "direction": "IO",
@@ -318,6 +259,17 @@
           },
           "wr_n": {
             "direction": "O"
+          },
+          "data_in": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "enable_p": {
+            "direction": "I"
+          },
+          "enable_n": {
+            "direction": "I"
           },
           "output_led": {
             "direction": "O"
@@ -369,18 +321,6 @@
           "USB_FIFO_0/rst"
         ]
       },
-      "USB_FIFO_0_output": {
-        "ports": [
-          "USB_FIFO_0/output_led",
-          "AUX4"
-        ]
-      },
-      "Net": {
-        "ports": [
-          "D",
-          "USB_FIFO_0/data"
-        ]
-      },
       "USB_FIFO_0_rd_n": {
         "ports": [
           "USB_FIFO_0/rd_n",
@@ -409,6 +349,44 @@
         "ports": [
           "clk_wiz_1/clk_out1",
           "USB_FIFO_0/clk"
+        ]
+      },
+      "Net": {
+        "ports": [
+          "D",
+          "USB_FIFO_0/data"
+        ]
+      },
+      "USB_FIFO_0_new_input_Clk": {
+        "ports": [
+          "USB_FIFO_0/new_input_Clk",
+          "MPairStorageControll_0/ClkOut"
+        ]
+      },
+      "USB_FIFO_0_output_led": {
+        "ports": [
+          "USB_FIFO_0/output_led",
+          "MPairStorageControll_0/P_Rst"
+        ]
+      },
+      "MPairStorageControll_0_Full": {
+        "ports": [
+          "MPairStorageControll_0/Full",
+          "AUX3",
+          "USB_FIFO_0/enable_p"
+        ]
+      },
+      "MPairStorageControll_0_Done": {
+        "ports": [
+          "MPairStorageControll_0/Done",
+          "AUX4",
+          "USB_FIFO_0/enable_n"
+        ]
+      },
+      "MPairStorageControll_0_DatOut": {
+        "ports": [
+          "MPairStorageControll_0/DatOut",
+          "USB_FIFO_0/data_in"
         ]
       }
     }

@@ -1,12 +1,12 @@
 #-----------------------------------------------------------
 # Vivado v2019.1 (64-bit)
-# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Thu Jan  7 18:05:37 2021
-# Process ID: 5124
-# Current directory: C:/Users/themo/OneDrive/Desktop/REVO/V/Final/Simulation and Bench marking/USB_FIFO/USB_FIFO.runs/synth_1
-# Command line: vivado.exe -log design_2_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_2_wrapper.tcl
-# Log file: C:/Users/themo/OneDrive/Desktop/REVO/V/Final/Simulation and Bench marking/USB_FIFO/USB_FIFO.runs/synth_1/design_2_wrapper.vds
-# Journal file: C:/Users/themo/OneDrive/Desktop/REVO/V/Final/Simulation and Bench marking/USB_FIFO/USB_FIFO.runs/synth_1\vivado.jou
+# Start of session at: Fri Jan  8 11:49:02 2021
+# Process ID: 25007
+# Current directory: /home/monx/Projects/FIFO_USB/USB_FIFO.runs/synth_1
+# Command line: vivado -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
+# Log file: /home/monx/Projects/FIFO_USB/USB_FIFO.runs/synth_1/design_1_wrapper.vds
+# Journal file: /home/monx/Projects/FIFO_USB/USB_FIFO.runs/synth_1/vivado.jou
 #-----------------------------------------------------------
-source design_2_wrapper.tcl -notrace
+source design_1_wrapper.tcl -notrace

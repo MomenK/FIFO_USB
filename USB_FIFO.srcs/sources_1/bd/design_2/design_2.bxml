@@ -2,12 +2,12 @@
 <Root MajorVersion="0" MinorVersion="37">
   <CompositeFile CompositeFileTopName="design_2" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1610042342"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1610042342"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1610042342"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1610042342"/>
+    <Generation Name="SYNTHESIS" State="RESET" Timestamp="1610069269"/>
+    <Generation Name="IMPLEMENTATION" State="RESET" Timestamp="1610069269"/>
+    <Generation Name="SIMULATION" State="RESET" Timestamp="1610069269"/>
+    <Generation Name="HW_HANDOFF" State="RESET" Timestamp="1610069269"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
-      <File Name="ip\design_2_Data_generator_0_0\design_2_Data_generator_0_0.xci" Type="IP">
+      <File Name="ip/design_2_Data_generator_0_0/design_2_Data_generator_0_0.xci" Type="IP">
         <Instance HierarchyPath="Data_generator_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -15,7 +15,7 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\design_2_MPairStorageControll_0_0\design_2_MPairStorageControll_0_0.xci" Type="IP">
+      <File Name="ip/design_2_MPairStorageControll_0_0/design_2_MPairStorageControll_0_0.xci" Type="IP">
         <Instance HierarchyPath="MPairStorageControll_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -23,7 +23,7 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\design_2_clk_wiz_1_0\design_2_clk_wiz_1_0.xci" Type="IP">
+      <File Name="ip/design_2_clk_wiz_1_0/design_2_clk_wiz_1_0.xci" Type="IP">
         <Instance HierarchyPath="clk_wiz_1"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -31,7 +31,7 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\design_2_util_vector_logic_0_0\design_2_util_vector_logic_0_0.xci" Type="IP">
+      <File Name="ip/design_2_util_vector_logic_0_0/design_2_util_vector_logic_0_0.xci" Type="IP">
         <Instance HierarchyPath="util_vector_logic_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -39,50 +39,12 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\design_2_USB_FIFO_0_0\design_2_USB_FIFO_0_0.xci" Type="IP">
+      <File Name="ip/design_2_USB_FIFO_0_0/design_2_USB_FIFO_0_0.xci" Type="IP">
         <Instance HierarchyPath="USB_FIFO_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="synth\design_2.v" Type="Verilog">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-      </File>
-      <File Name="sim\design_2.v" Type="Verilog">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="design_2_ooc.xdc" Type="XDC">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="OUT_OF_CONTEXT"/>
-      </File>
-      <File Name="hw_handoff\design_2.hwh" Type="HwHandoff">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="HW_HANDOFF"/>
-      </File>
-      <File Name="hw_handoff\design_2_bd.tcl">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="HW_HANDOFF"/>
-      </File>
-      <File Name="synth\design_2.hwdef">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="HW_HANDOFF"/>
-      </File>
-      <File Name="sim\design_2.protoinst">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>
       </File>
     </FileCollection>
