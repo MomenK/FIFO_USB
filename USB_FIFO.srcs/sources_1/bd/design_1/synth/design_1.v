@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-//Date        : Fri Jan  8 11:48:58 2021
+//Date        : Fri Jan  8 13:53:25 2021
 //Host        : monx-PC running 64-bit Ubuntu 20.04.1 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -45,7 +45,8 @@ module design_1
   assign usb_uart_txd = UART_TX_0_o_TX_Serial;
   design_1_Data_generator_0_0 Data_generator_0
        (.CLK(clk_wiz_1_clk_out3),
-        .DataOut(Data_generator_0_DataOut));
+        .DataOut(Data_generator_0_DataOut),
+        .rst(UART_RX_0_o_Send_command));
   design_1_MPairStorageControll_0_0 MPairStorageControll_0
        (.ClkIn(clk_wiz_1_clk_out2),
         .ClkOut(UART_TX_0_o_TX_Done),

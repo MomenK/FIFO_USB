@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Jan  8 11:48:58 2021" VIVADOVERSION="2019.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Jan  8 13:53:25 2021" VIVADOVERSION="2019.1">
 
   <SYSTEMINFO ARCH="artix7" BOARD="trenz.biz:te0711_35_2c:part0:1.0" DEVICE="7a35t" NAME="design_1" PACKAGE="csg324" SPEEDGRADE="-2"/>
 
@@ -41,6 +41,11 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
+        <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="UART_RX_0_o_Send_command">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="UART_RX_0" PORT="o_Send_command"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT CLKFREQUENCY="40000000" DIR="I" NAME="CLK" SIGIS="clk" SIGNAME="clk_wiz_1_clk_out3">
           <CONNECTIONS>
             <CONNECTION INSTANCE="clk_wiz_1" PORT="clk_out3"/>
@@ -135,6 +140,7 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="AUX4"/>
             <CONNECTION INSTANCE="MPairStorageControll_0" PORT="P_Rst"/>
+            <CONNECTION INSTANCE="Data_generator_0" PORT="rst"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="15" NAME="o_RX_Byte" RIGHT="0" SIGIS="undef"/>

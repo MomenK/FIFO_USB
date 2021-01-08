@@ -34,6 +34,8 @@ use IEEE.NUMERIC_STD.ALL;
 entity Data_generator is
   Port (
   
+  rst    : in std_logic;
+  
   CLK    : in std_logic;
   DataOut : out std_logic_vector(11 downto 0)
    );
@@ -49,11 +51,17 @@ DataOut <= buff_data;
 
 Process(CLK)
 begin
+
+if rst = '1' then
+
+    buff_data <= (OTHERS => '0');
+else
  if rising_edge(CLK) then
  
- buff_data <= std_logic_vector( unsigned(buff_data) + 1 );
+    buff_data <= std_logic_vector( unsigned(buff_data) + 1 );
  
  end if;
+end if;
  
  
  end process;

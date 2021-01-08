@@ -55,16 +55,21 @@
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_2_Data_generator_0_0 (
+  rst,
   CLK,
   DataOut
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK, FREQ_HZ 40000000, PHASE 90.0, CLK_DOMAIN /clk_wiz_1_clk_out1, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst RST" *)
+input wire rst;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK, ASSOCIATED_RESET rst, FREQ_HZ 40000000, PHASE 90.0, CLK_DOMAIN /clk_wiz_1_clk_out1, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK CLK" *)
 input wire CLK;
 output wire [11 : 0] DataOut;
 
   Data_generator inst (
+    .rst(rst),
     .CLK(CLK),
     .DataOut(DataOut)
   );

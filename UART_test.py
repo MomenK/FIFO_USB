@@ -1,7 +1,7 @@
 
 import serial
 
-# import numpy as np
+import numpy as np
 import time
 
 ser = serial.Serial('/dev/COM3', 8*1000000, timeout=1)  # open seri
@@ -38,6 +38,9 @@ while True:
 
 
 print(rx_data)
+data1 = np.frombuffer(rx_data, dtype=np.int16, count=-1).reshape(-1,1024)
+print(data1)
+print(data1.shape)
 
 # ser = serial.Serial('COM4', 8*1000000, timeout=2)  # open serial port
 

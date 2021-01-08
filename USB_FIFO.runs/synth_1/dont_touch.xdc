@@ -3,25 +3,30 @@
 
 # XDC: imports/REVO/REVO1.xdc
 
-# Block Designs: bd/design_1/design_1.bd
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1 || ORIG_REF_NAME==design_1} -quiet] -quiet
+# Block Designs: bd/design_2/design_2.bd
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_2 || ORIG_REF_NAME==design_2} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_UART_TX_0_0/design_1_UART_TX_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_UART_TX_0_0 || ORIG_REF_NAME==design_1_UART_TX_0_0} -quiet] -quiet
+# IP: bd/design_2/ip/design_2_Data_generator_0_0/design_2_Data_generator_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_2_Data_generator_0_0 || ORIG_REF_NAME==design_2_Data_generator_0_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_UART_RX_0_0/design_1_UART_RX_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_UART_RX_0_0 || ORIG_REF_NAME==design_1_UART_RX_0_0} -quiet] -quiet
+# IP: bd/design_2/ip/design_2_MPairStorageControll_0_0/design_2_MPairStorageControll_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_2_MPairStorageControll_0_0 || ORIG_REF_NAME==design_2_MPairStorageControll_0_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_clk_wiz_1_0 || ORIG_REF_NAME==design_1_clk_wiz_1_0} -quiet] -quiet
+# IP: bd/design_2/ip/design_2_clk_wiz_1_0/design_2_clk_wiz_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_2_clk_wiz_1_0 || ORIG_REF_NAME==design_2_clk_wiz_1_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_util_vector_logic_0_0/design_1_util_vector_logic_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_util_vector_logic_0_0 || ORIG_REF_NAME==design_1_util_vector_logic_0_0} -quiet] -quiet
+# IP: bd/design_2/ip/design_2_util_vector_logic_0_0/design_2_util_vector_logic_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_2_util_vector_logic_0_0 || ORIG_REF_NAME==design_2_util_vector_logic_0_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_MPairStorageControll_0_0/design_1_MPairStorageControll_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_MPairStorageControll_0_0 || ORIG_REF_NAME==design_1_MPairStorageControll_0_0} -quiet] -quiet
+# IP: bd/design_2/ip/design_2_USB_FIFO_0_0/design_2_USB_FIFO_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_2_USB_FIFO_0_0 || ORIG_REF_NAME==design_2_USB_FIFO_0_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_Data_generator_0_0/design_1_Data_generator_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_Data_generator_0_0 || ORIG_REF_NAME==design_1_Data_generator_0_0} -quiet] -quiet
+# XDC: bd/design_2/ip/design_2_clk_wiz_1_0/design_2_clk_wiz_1_0_board.xdc
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_2_clk_wiz_1_0 || ORIG_REF_NAME==design_2_clk_wiz_1_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
 
-# XDC: bd/design_1/design_1_ooc.xdc
+# XDC: bd/design_2/ip/design_2_clk_wiz_1_0/design_2_clk_wiz_1_0.xdc
+#dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_2_clk_wiz_1_0 || ORIG_REF_NAME==design_2_clk_wiz_1_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
+
+# XDC: bd/design_2/ip/design_2_clk_wiz_1_0/design_2_clk_wiz_1_0_ooc.xdc
+
+# XDC: bd/design_2/design_2_ooc.xdc

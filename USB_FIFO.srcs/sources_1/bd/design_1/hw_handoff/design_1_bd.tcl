@@ -274,7 +274,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net MPairStorageControll_0_DatOut [get_bd_pins MPairStorageControll_0/DatOut] [get_bd_pins UART_TX_0/i_TX_Byte]
   connect_bd_net -net MPairStorageControll_0_Done [get_bd_pins MPairStorageControll_0/Done] [get_bd_pins UART_TX_0/enable_n]
   connect_bd_net -net MPairStorageControll_0_Full [get_bd_pins MPairStorageControll_0/Full] [get_bd_pins UART_TX_0/i_TX_DV]
-  connect_bd_net -net UART_RX_0_o_Send_command [get_bd_ports AUX4] [get_bd_pins MPairStorageControll_0/P_Rst] [get_bd_pins UART_RX_0/o_Send_command]
+  connect_bd_net -net UART_RX_0_o_Send_command [get_bd_ports AUX4] [get_bd_pins Data_generator_0/rst] [get_bd_pins MPairStorageControll_0/P_Rst] [get_bd_pins UART_RX_0/o_Send_command]
   connect_bd_net -net UART_TX_0_o_TX_Done [get_bd_pins MPairStorageControll_0/ClkOut] [get_bd_pins UART_TX_0/o_TX_Done]
   connect_bd_net -net UART_TX_0_o_TX_Serial [get_bd_ports usb_uart_txd] [get_bd_pins UART_TX_0/o_TX_Serial]
   connect_bd_net -net clk_wiz_1_clk_out1 [get_bd_pins UART_RX_0/i_Clk] [get_bd_pins UART_TX_0/i_Clk] [get_bd_pins clk_wiz_1/clk_out1]

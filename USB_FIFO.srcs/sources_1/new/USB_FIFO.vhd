@@ -25,7 +25,8 @@ entity USB_FIFO is
 end USB_FIFO;
 
 architecture rtl of USB_FIFO is
-   signal data_o             : unsigned(7 downto 0) := (others => '0');
+--   signal data_o             : unsigned(7 downto 0) := (others => '0');
+   signal data_o             : std_logic_vector(7 downto 0) := (others => '0');
     signal data_i             : unsigned(7 downto 0) := (others => '0');
     signal data_en            : std_logic            := '0';
 
@@ -41,6 +42,8 @@ architecture rtl of USB_FIFO is
     signal reg_logic  :  std_logic_vector(7 downto 0);
     
     signal counterr      : unsigned(7 downto 0) := (others => '0');
+    
+    signal LSB      : std_logic            := '0';
 
     type states is (RD_IDLE, RD_PRE_WAIT, RD_POST_WAIT, WR_IDLE, WR_WAIT, WR_DONE);
     
@@ -115,13 +118,34 @@ begin
                     if txe_n_sync = '0' then
                         state   <= WR_WAIT;
 --                        data_o  <= reg + 1;
---                        counterr <= counterr+1;
-                          data_o <=counterr;
+
+
+                         if LSB = '0' then
+                            LSB <='1';                       
+--                            data_o <= std_logic_vector(counterr);
+                            
+                           data_o <= data_in(7 downto 0);
+                           new_input_Clk<= '0';
+                         
+                         
+                         else
+                             LSB <='0';
+--                             data_o <= std_logic_vector(counterr);
+                             data_o <= ( 0 =>  data_in(8), 1=> data_in(9), 2=>  data_in(10),others => data_in(11) );
+                             counterr <= counterr+1;
+                             new_input_Clk<= '1';
+                             
+                         end if;
+
+
+
+
+
 
 --                         data_o <= unsigned(data_in(7 downto 0));
 --                        data_en <= '1';
                     end if;
-                new_input_Clk<= '0';
+                
                
                else
                  state   <= WR_IDLE;
@@ -137,7 +161,7 @@ begin
                         counter <= "00";
 --                        data_en <= '0';
                     end if;
-                new_input_Clk<= '1';
+                
                 
                 
                 when WR_DONE =>
